@@ -77,7 +77,7 @@ function getNodePackagePath(packageName: string): string {
 
 function metro(...args: $ReadOnlyArray<string>): ExecaPromise {
   log(`🚇 metro ${args.join(' ')} `);
-  return execa('npm', ['run', 'metro', ...args]);
+  return execa('npx', ['--offline', 'metro', ...args]);
 }
 
 export const tasks = {
